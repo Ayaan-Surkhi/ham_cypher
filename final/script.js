@@ -3,13 +3,14 @@ const ANSWER_HASH = "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08
 
 const HINTS = [
   { at: 0,  text: "A photograph carries more than what's on screen -- quiet details about how and when it was made travel inside the file itself (metadata)." },
-  { at: 120, text: "There are free tools online built just for reading what's hidden inside a file (metadata) like this. Search for one and hand the photo over to it." },
-  { at: 180, text: "Somewhere in what it hands back is a line that isn't describing the picture at all -- it's describing where to go next (check picture location)." }
+  { at: 60, text: "There are free tools online built just for reading what's hidden inside a file (metadata) like this. Search for one of those sites" },
+  { at: 120, text: "try exifdata.com or jimpl.com or metadata2go.com" },  
+  { at: 180, text: "look for the author and copyright field" },  
+  { at: 240, text: "Somewhere in what it hands back is a line that isn't describing the picture at all -- it's describing where to go next (check picture location)." }
 ];
 
 let startTime = null;
 let timerInterval = null;
-let found = false;
 
 async function sha256(text){
   const enc = new TextEncoder().encode(text);
@@ -48,8 +49,6 @@ function tick(){
   const elapsed = Math.floor((Date.now() - startTime) / 1000);
   document.getElementById('clockTag').textContent = fmt(elapsed);
 
-  if (found) { return ;}
-
   HINTS.forEach((h, i) => {
     const row = document.getElementById('hint-' + i);
     if (!row) return;
@@ -67,7 +66,6 @@ async function checkAnswer(){
   if (!val) return;
   const hash = await sha256(val);
   if (hash === ANSWER_HASH){
-    found = true;
     fb.textContent = 'Confirmed. This is the final letter you need for your cypher.';
     fb.className = 'ok';
   } else {

@@ -2,9 +2,9 @@ const NUM_RINGS = 5;
 const TARGET_HASH = "582969a27a84f2b65970db6cb1907706e6518405ced1876352f6627d794b430e";
 const STATIONS = [
   { label: "Question 1", url: "https://cipherq1.netlify.app" },
-  { label: "Question 2", url: "#" },
+  { label: "Question 2", url: "https://idyllic-figolla-8799a8.netlify.app/" },
   { label: "Question 3", url: "https://mafia-wiretap.netlify.app/" },
-  { label: "Question 4", url: "#" },
+  { label: "Question 4", url: "https://mafia-cipher.netlify.app" },
   { label: "Question 5", url: "/final/final.html" }
 ];
 
