@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Case File 47-B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="stamp-row">
+    <span>DEPT. OF INVESTIGATION</span>
+    <span>THE FINAL HINT</span>
+  </div>
+
+  <div id="cover">
+    <div class="tab">CONFIDENTIAL</div>
+    <h1>The Photograph</h1>
+    <p>Word from the street: the Family's bookkeeper slipped out of a meeting an hour ago, and somebody caught him on film doing it. It's the only lead you've got tonight.</p>
+    <span class="go">OPEN FILE &rsaquo;</span>
+  </div>
+
+  <div id="file">
+
+    <div class="card">
+      <h2>Exhibit A</h2>
+      <div class="photo-frame">
+        <div class="tape"></div>
+        <img id="evidencePhoto" src="evidence.jpg" alt="Evidence photograph">
+      </div>
+      <div class="caption">Recovered from an informant, 14 NOV, 23:47</div>
+
+      <a class="dl-btn" id="dlBtn" href="evidence.jpg" download="evidence.jpg">DOWNLOAD EVIDENCE PHOTO</a>
+      <div class="dl-note" id="dlNote">Right-click and "Save As" if the download doesn't start automatically.</div>
+
+      <p class="howto">The picture looks empty. It isn't. Dig deeper.</p>
+    </div>
+
+    <div class="card">
+      <h2>Leads <span id="clockTag">00:00</span></h2>
+      <div id="hintList"></div>
+    </div>
+
+    <div class="card answer-row" id="answerCard">
+      <h2>Confirm Your Find</h2>
+      <p class="answer-sub">Once you know where to look, go there and find the letter. Enter it below.</p>
+      <input id="letterInput" maxlength="4" placeholder="ENTER LETTER" autocomplete="off">
+      <button id="submitBtn">SUBMIT</button>
+      <div id="feedback"></div>
+    </div>
+
+  </div>
+
+  <div class="footnote">Camera never lies. Neither does its metadata.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
